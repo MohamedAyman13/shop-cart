@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>smart watches</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/all.css"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+   
+</head>
+<body>
+
+    <!-- modals -->
+    <!-- sign-up-Modal -->
+    <div class="modal fade" id="sign-up" tabindex="-1" aria-labelledby="sign-up-Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="sign-up-Label">Sign Up</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="signupForm">
+                    <div class="d-inline-block">
+                    <label for="first-name" >First name:</label><br>
+                    <input type="text" id="first" class="form-field-width" name="first-name" required><br><br>
+                    </div>
+                    <div class="d-inline-block ms-2">
+                    <label for="last-name" >Last name:</label><br>
+                    <input type="text" id="last" class="form-field-width" name="last-name" required><br><br>
+                    </div><br>
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" class="w-100" required><br><br>
+                    <label for="password">Password:</label><br>
+                    <input type="password" id="password" name="password" class="w-100" required><br><br>
+                </form>
+                <span>do you have an Account?</span>
+                <a style="display: inline;" href="#" id="have-account">click here</a>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" id="sign" class="btn btn-primary" value="Submit">Submit</button>
+            </div>
+            </div>
+        </div>
+        </div>
+
+    <!-- sign-in-Modal -->
+    <div class="modal fade" id="sign-in" tabindex="-1" aria-labelledby="sign-in-label" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="sign-in-label">Sign In</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="signinForm">
+                        <label for="email">Email:</label><br>
+                        <input type="email" id="email-sign-in" name="email" class="w-100" required><br><br>
+                        <label for="password">Password:</label><br>
+                        <input type="password" id="password-sign-in" name="password" class="w-100" required><br><br>
+                        <input type="checkbox" id="rememberMe" name="rememberMe">
+                        <label for="rememberMe">Remember me</label><br><br>
+                        <span>don't you have an Account?</span>
+                        <a style="display: inline;" href="#" id="not-have-account">create one</a>
+                    </form>
+            </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary" id="login-button" value="Submit">Submit</button>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <header>
+         <div class="container">
+
+             <nav>
+             <div class="header-content">
+                <div>
+                <a href="index.html" class="brand" style="text-decoration: none; color: #fff; font-size: 32px;">SHOP</a>
+                </div>
+                
+                <ul id="buttons">
+                      <li><button type="button" class="btn btn-secondary me-2" data-bs-toggle="modal" id="sign-up-button" data-bs-target="#sign-up">Sign Up</button></li>
+                        <li><button type="button" class="btn btn-secondary" data-bs-toggle="modal" id="sign-in-button" data-bs-target="#sign-in">Sign In</button></li>
+                  </ul>
+                  <ul id="user_info">
+                    <li><a href="#" id="user"></a></li>
+                  </ul>
+                  <ul id="cart" >
+                    <div class="shopping-cart">
+                    <i class="fas fa-shopping-cart fs-4"></i>
+                    <div id="counter"></div>
+                    <span class="fs-4 ms-1"> cart</span> 
+                    <i class="fas fa-sort-down fs-4"></i> 
+                    <i class="fas fa-sort-up fs-4" style="display: none;"></i>
+                    </div>
+                    <a href="index.html" id="logout" class="fs-4">logout</a>
+                    <div class="product-cart">
+                        <div></div>
+                        <a href="cart.html">view all products</a>
+                    </div>
+                </ul>                
+              </nav>
+             </div>
+              
+         </div>
+    </header>
+    
+    <div class="search-section">
+        <div style="width: 90%; margin: 0 auto;">
+            <select id="search-select">
+            <option value="product">search by: Name</option>
+            <option value="category">search by: Category</opyion>
+            </select>
+            <input type="search" name="search" id="search" placeholder="Search">
+        </div>    
+    </div>
+    
+    <section class="section-form">
+        <div class="container mt-4">
+            <div class="row" id="products-section"></div>
+        </div>  
+    </section>
+    
+<script src="js/bootstrap.min.js"></script>
+<script src="js/productArray.js"></script>
+<script src="js/script.js"></script>
+<script src="js/products.js"></script>
+<script src="js/cart.js"></script>
+</body>
+</html>

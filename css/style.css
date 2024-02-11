@@ -1,0 +1,284 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif!important;    
+}
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+header {
+    height: 70px;
+    background-color: grey;
+    padding: 10px 0;
+}
+.header-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    color: #fff;
+}
+ul a {
+    text-decoration: none;
+    color: #fff;
+}
+
+ul#buttons {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+div.shopping-cart {
+    position: relative;
+}
+
+div#counter {
+    position: absolute;
+    top: 18px;
+    right: 60px;
+}
+
+a#logout {
+    margin-left: 25px;
+}
+
+ul#cart{
+    visibility: hidden;
+}
+
+nav  li a {
+    display: block;
+    color: #fff;
+    min-width: 80px;
+    padding: 5px;
+    margin: 0px 5px;
+}
+/* product cart */
+
+.product-cart {
+    width: 300px;
+    position: absolute;
+    background-color: grey;
+    top: 60px;
+    right: 89px;
+    padding: 10px;
+    text-align: center;
+    display: none;
+    z-index: 100;
+}
+
+.cart-product {
+    height: 50px;
+    width: auto;
+    background-color: aliceblue;
+    border-radius: 5px;
+    margin-bottom: 8px;
+}
+
+/* search section */
+
+.search-section {
+    height: 75px;
+    border-bottom: 0.2px solid rgba(128, 128, 128, 0.685);
+}
+
+#search-select {
+    width: 49%;
+    border: 0.2px solid #d1cfcf;
+    height: 35px;
+    margin-top: 20px;
+    padding: 0 0 5px 7px;
+}
+
+#search {
+    width: 49%;
+    border: 0.2px solid #d1cfcf;
+    height: 35px;
+    margin-top: 20px;
+    padding: 0 0 5px 7px;
+    margin-left: 0.5%;
+}
+
+/* Modals */
+
+.form-field-width {
+    width: 375px!important;
+}
+
+/* product */
+
+.card-body {
+    position: relative;
+}
+.card {
+    transition: all 0.2s;
+    margin-bottom: 0.5rem;
+}
+
+.card:hover {
+    border-color: rgb(46, 87, 126);
+    transform: translateY(-1%);
+}
+
+
+.heart-icon-style {
+    font-size: 28px;
+    position: absolute;
+    cursor: pointer;
+    top: 116px;
+    right: 20px;
+    color: #8080809a;
+    transition: all 0.4s;
+}
+.heart-icon-style:hover {
+    color: red;
+}
+.heart-icon-style:active {
+    color: red;
+}
+
+.hide {
+    display: none;
+}
+
+/* Cart Products */
+
+.cart-page-product {
+    width: 520px;
+    height: 220px;
+    border-radius: 12px;
+    background-color: #97979779;
+    padding: 30px 30px;
+}
+
+.bottom {
+    margin-bottom: 14px!important;
+}
+
+.cart-Products {
+    display: grid!important;
+    grid-template-columns: repeat(auto-fill, minmax(420px, 520px));
+    gap: 1rem;
+}
+
+/* favorite section */
+
+#whislist-section {
+    position: relative;
+    padding: 20px;
+  }
+  
+.favorite-word {
+    font-size: 32px;
+    text-align: center;
+    position: relative;
+    margin-bottom: 50px;
+}
+.favorite-word::after {
+    content: "";
+    position: absolute;
+
+    width: 6%;
+    height: 8%;
+
+    bottom: -10%;
+    left: 47%;
+
+    background-color: red;
+    transition: all 0.2s;
+}
+
+.favorite-word:hover::after {
+    width: 9.1%;
+    left: 45.5%;
+}
+
+.pre-btn,
+.nxt-btn {
+  border: none;
+  width: 10vw;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+  cursor: pointer;
+  z-index: 8;
+}
+
+
+.pre-btn {
+    left: 0;
+    transform: rotate(180deg);
+}
+  
+.nxt-btn {
+    right: 0;
+}
+  
+.pre-btn img,
+.nxt-btn img {
+    opacity: 0.2;
+}
+  
+.pre-btn:hover img,
+.nxt-btn:hover img {
+    opacity: 1;
+}
+  
+.product-container {
+    padding:  15px 10vw 0 10vw;
+    margin-bottom: 30px;
+    display: flex;
+    height: 340px;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+.product-card {
+    min-width: 360px; 
+    min-height: 300px; 
+    padding: 20px; 
+    background-color: #97979779; 
+    border-radius: 20px;
+    margin-right: 20px;
+    transition: all 0.3s;
+}
+
+.product-card:hover {
+    transform: translatey(-15px);
+    border: 1px solid #ff1100;
+}
+
+.product-image {
+    background-color: #a5a3a354; 
+    width: 200px; 
+    border-radius: 20px; 
+    margin: 0 auto 5px auto;
+}
+
+.product-info {
+    position: relative;
+}
+
+.whislist-heart {
+    font-size: 32px;
+    color: red;
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+    cursor: pointer;
+}
